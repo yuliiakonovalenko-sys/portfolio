@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base reset ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { overflow-x: hidden; }
+
+/* ─── Nav link pill ─────────────────────────────────────────────────────────
+   Kept in CSS because the hover state needs background + color + border
+   change simultaneously. In Tailwind this would require group-hover which
+   is more verbose. Everything else about the nav is Tailwind.
+───────────────────────────────────────────────────────────────────────────── */
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 16px;
+  border: 1px solid #6b6b6b;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: #2d2f39;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.nav-link:hover { background: #2d2f39; color: #fff; border-color: #2d2f39; }
+
+/* phone ≤420px */
+@media (max-width: 420px) {
+  .nav-link { padding: 7px 10px; font-size: 13px; }
+}
+
+/* ─── Hero CTA card ─────────────────────────────────────────────────────────
+   The card image has a fixed composition (photo + "Book a call" + arrow
+   positioned at specific pixel offsets on the card PNG). This positioning
+   is inherently pixel-based and must stay in CSS — changing it won't
+   affect any other section.
+───────────────────────────────────────────────────────────────────────────── */
+
+/* Wrapper — sets card dimensions at each breakpoint */
+.hero-cta-wrap {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  align-self: center;
+  /* phone default */
+  width: 100%;
+  max-width: 320px;
+  height: 280px;
+}
+@media (min-width: 421px) {
+  .hero-cta-wrap { max-width: 420px; height: 360px; }
+}
+@media (min-width: 1101px) {
+  .hero-cta-wrap { width: 497px; max-width: none; height: 504px; }
+}
+
+/* Overlay content — photo + text — positioned on top of the card image */
+.hero-cta-content {
+  position: absolute;
+  /* phone ≤420px */
+  left: 50%;
+  transform: translateX(-50%);
+  top: 70px;
+  width: 148px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 11px;
+}
+@media (min-width: 421px) {
+  .hero-cta-content { top: 88px; width: 176px; }
+}
+@media (min-width: 801px) and (max-width: 1100px) {
+  /* tablet: card is in a flex row beside the description */
+  .hero-cta-content {
+    top: clamp(70px, 9vw, 120px);
+    width: clamp(150px, 18vw, 200px);
+  }
+}
+@media (min-width: 1101px) {
+  /* desktop: card is 497×504 → content at Figma coordinates */
+  .hero-cta-content {
+    left: 159px;
+    transform: none;
+    top: 138px;
+    width: 219px;
+  }
+}
+
+/* Photo circle inside the card */
+.hero-cta-photo {
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+}
+@media (min-width: 1101px) {
+  .hero-cta-photo { width: 96px; height: 96px; }
+}
+.hero-cta-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+
+/* "Book a call" text */
+.hero-cta-text {
+  font-family: 'Instrument Serif', serif;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.12;
+  white-space: nowrap;
+  color: #2d2f39;
+  /* phone */
+  font-size: 24px;
+}
+@media (min-width: 421px) { .hero-cta-text { font-size: 30px; } }
+@media (min-width: 801px) and (max-width: 1100px) { .hero-cta-text { font-size: clamp(24px, 3vw, 38px); } }
+@media (min-width: 1101px) { .hero-cta-text { font-size: 40px; } }
+
+/* Project image hover — isolated here so it doesn't bleed */
+.project-img-link { display: block; text-decoration: none; overflow: hidden; border-radius: 2px; }
+.project-img-link img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+.project-img-link:hover img { transform: scale(1.04); }
+
+/* Other projects slider card hover */
+.op-card:hover .op-card-img img { transform: scale(1.04); }
