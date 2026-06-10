@@ -69,7 +69,7 @@ export const PROJECTS: Project[] = [
         { name: "Webflow Developer",      role: "Webflow Developer" },
       ],
     },
-    cover: "/assets/proj-olsom.png",
+    cover: "/assets/proj-olsom.jpg",
     heroImage: "/assets/projects/Olsom project/1.jpg",
     color: "#1A2332",
     sections: [
@@ -442,7 +442,7 @@ export const PROJECTS: Project[] = [
         { name: "Project Manager",     role: "Project Manager" },
       ],
     },
-    cover: "/assets/proj-global.png",
+    cover: "/assets/proj-global.jpg",
     heroImage: "/assets/projects/GS/1.jpg",
     color: "#1A5C38",
     sections: [
