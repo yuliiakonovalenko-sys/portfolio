@@ -93,18 +93,56 @@ body { overflow-x: hidden; }
 
 /* Photo circle inside the card */
 .hero-cta-photo {
+  position: relative;
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
-  width: 80px;
-  height: 80px;
+  /* phone */
+  width: 60px;
+  height: 60px;
 }
 @media (min-width: 1101px) {
   .hero-cta-photo { width: 96px; height: 96px; }
 }
-.hero-cta-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+/* Photo fades out on card hover */
+.hero-photo-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  z-index: 1;
+  transition: opacity 0.35s ease;
+}
+.hero-cta-wrap:hover .hero-photo-img { opacity: 0; }
 
-/* "Book a call" text */
+/* Emoji ring — sits behind the photo, reveals on hover */
+.hero-emoji-ring {
+  position: absolute;
+  inset: 0;
+  background: #FBEAF3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-emoji {
+  position: absolute;
+  font-size: 28px;
+  opacity: 0;
+  animation: emoji-cycle 2.5s linear infinite;
+}
+@media (min-width: 421px) { .hero-emoji { font-size: 34px; } }
+@media (min-width: 1101px) { .hero-emoji { font-size: 40px; } }
+@keyframes emoji-cycle {
+  0%    { opacity: 0; }
+  8%    { opacity: 1; }
+  14%   { opacity: 1; }
+  20%   { opacity: 0; }
+  100%  { opacity: 0; }
+}
+
+/* "Chat with me" text */
 .hero-cta-text {
   font-family: 'Instrument Serif', serif;
   font-weight: 400;
@@ -126,3 +164,17 @@ body { overflow-x: hidden; }
 
 /* Other projects slider card hover */
 .op-card:hover .op-card-img img { transform: scale(1.04); }
+
+/* Mouse balls cursor effect */
+.mouse-ball {
+  pointer-events: none;
+  position: fixed;
+  border-radius: 50%;
+  opacity: 0.55;
+  z-index: 9999;
+  animation: ball-implode 1s ease-in-out both;
+}
+@keyframes ball-implode {
+  100% { transform: scale(0); }
+}
+

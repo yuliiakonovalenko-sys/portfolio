@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import MouseBalls from '@/components/MouseBalls'
 
 export const metadata: Metadata = {
   title: 'Yuliia Konovalenko — Brand & Product Designer',
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="bg-bg text-dark font-sans font-medium">
+        <MouseBalls />
         {children}
       </body>
     </html>

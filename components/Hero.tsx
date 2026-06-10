@@ -78,7 +78,20 @@ export default function Hero() {
             />
             <div className="hero-cta-content">
               <div className="hero-cta-photo">
-                <img src="/assets/photo.png" alt="Yuliia Konovalenko" />
+                <img src="/assets/photo.png" alt="Yuliia Konovalenko" className="hero-photo-img" />
+                <div className="hero-emoji-ring">
+                  {[
+                    { emoji: '👋', delay: '0s' },
+                    { emoji: '🦄', delay: '-2s' },
+                    { emoji: '📝', delay: '-1.5s' },
+                    { emoji: '💅', delay: '-1s' },
+                    { emoji: '👩‍💻', delay: '-0.5s' },
+                  ].map(({ emoji, delay }) => (
+                    <span key={emoji} className="hero-emoji" style={{ animationDelay: delay }}>
+                      {emoji}
+                    </span>
+                  ))}
+                </div>
               </div>
               <a
                 href="mailto:yuliia.konovalenko@gmail.com"

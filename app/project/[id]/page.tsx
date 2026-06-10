@@ -62,12 +62,12 @@ function SectionChallenges({ heading, items }: {
 }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2">
-      <div className="px-5 md:px-10 py-10 md:py-[72px]">
+      <div className="px-5 md:px-10 pt-10 pb-0 md:py-[72px]">
         <h2 className="font-serif font-normal text-[clamp(32px,3.5vw,48px)] leading-[1.1] tracking-[-0.3px]">
           {heading || 'Project Tasks and Challenges'}
         </h2>
       </div>
-      <div className="px-5 md:px-10 py-10 md:py-[72px]">
+      <div className="px-5 md:px-10 pt-4 pb-10 md:py-[72px]">
         <div className="flex flex-col">
           {items.map((item, i) => (
             <div key={i} className={`py-7 ${i === 0 ? 'pt-0' : ''} ${i < items.length - 1 ? 'border-b border-border' : ''}`}>
@@ -84,12 +84,12 @@ function SectionChallenges({ heading, items }: {
 function SectionGoals({ heading, items }: { heading?: string; items: string[] }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2">
-      <div className="px-5 md:px-10 py-10 md:py-[72px] flex items-start">
+      <div className="px-5 md:px-10 pt-10 pb-0 md:py-[72px] flex items-start">
         <h2 className="font-serif font-normal text-[clamp(32px,3.5vw,48px)] leading-[1.1] tracking-[-0.3px]">
           {heading || 'Key Project Goals'}
         </h2>
       </div>
-      <div className="px-5 md:px-10 py-10 md:py-[72px]">
+      <div className="px-5 md:px-10 pt-4 pb-10 md:py-[72px]">
         <div className="flex flex-col">
           {items.map((item, i) => (
             <div key={i} className={`grid grid-cols-[40px_1fr] gap-0 py-6 ${i === 0 ? 'pt-0' : ''} ${i < items.length - 1 ? 'border-b border-border' : ''}`}>
@@ -137,12 +137,12 @@ function SectionResults({ heading, items }: {
 }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2">
-      <div className="px-5 md:px-10 py-10 md:py-[72px] flex items-start">
+      <div className="px-5 md:px-10 pt-10 pb-0 md:py-[72px] flex items-start">
         <h2 className="font-serif font-normal text-[clamp(32px,3.5vw,48px)] leading-[1.1] tracking-[-0.3px]">
           {heading || 'Results'}
         </h2>
       </div>
-      <div className="px-5 md:px-10 py-10 md:py-[72px]">
+      <div className="px-5 md:px-10 pt-4 pb-10 md:py-[72px]">
         <div className="flex flex-col">
           {items.map((item, i) => (
             <div key={i} className={`py-6 ${i === 0 ? 'pt-0' : ''} ${i < items.length - 1 ? 'border-b border-border' : 'pb-0'}`}>
@@ -160,12 +160,12 @@ function SectionConclusion({ heading, text }: { heading?: string; text: string |
   const texts = Array.isArray(text) ? text : [text]
   return (
     <div className="grid grid-cols-1 md:grid-cols-2">
-      <div className="px-5 md:px-10 py-10 md:py-[72px] flex items-start">
+      <div className="px-5 md:px-10 pt-10 pb-0 md:py-[72px] flex items-start">
         <h2 className="font-serif font-normal text-[clamp(32px,3.5vw,48px)] leading-[1.1] tracking-[-0.3px]">
           {heading || 'Conclusion'}
         </h2>
       </div>
-      <div className="px-5 md:px-10 py-10 md:py-[72px] flex flex-col gap-5">
+      <div className="px-5 md:px-10 pt-4 pb-10 md:py-[72px] flex flex-col gap-5">
         {texts.map((t, i) => (
           <p key={i} className="text-[16px] md:text-[20px] font-medium leading-[1.25] tracking-[0.5px] text-dark">{t}</p>
         ))}
@@ -174,9 +174,10 @@ function SectionConclusion({ heading, text }: { heading?: string; text: string |
   )
 }
 
+// Fix 1: single column on mobile, pair on md+
 function SectionImagePair({ left, right }: { left: string; right: string }) {
   return (
-    <div className="grid grid-cols-2 gap-5 px-5 md:px-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 px-5 md:px-10">
       <img src={left}  alt="" className="w-full block" />
       <img src={right} alt="" className="w-full block" />
     </div>
@@ -205,12 +206,12 @@ function SectionVideo({ youtubeId, heading }: { youtubeId: string; heading?: str
 function SectionBulletList({ heading, items }: { heading?: string; items: string[] }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2">
-      <div className="px-5 md:px-10 py-10 md:py-[72px] flex items-start">
+      <div className="px-5 md:px-10 pt-10 pb-0 md:py-[72px] flex items-start">
         <h2 className="font-serif font-normal text-[clamp(32px,3.5vw,48px)] leading-[1.1] tracking-[-0.3px]">
           {heading}
         </h2>
       </div>
-      <div className="px-5 md:px-10 py-10 md:py-[72px]">
+      <div className="px-5 md:px-10 pt-4 pb-10 md:py-[72px]">
         <ul className="flex flex-col gap-4">
           {items.map((item, i) => (
             <li key={i} className="flex items-start gap-3 text-[16px] md:text-[20px] font-medium leading-[1.25] tracking-[0.5px] text-dark">
