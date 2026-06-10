@@ -13,31 +13,31 @@ const projects = [
   {
     id: 'saastorm',
     name: 'SaaStorm',
-    desc: 'B2B SaaS growth agency — brand & web',
+    desc: 'B2B SaaS agency — brand & web design',
     img: '/assets/proj-saastorm.png',
   },
   {
     id: 'termopot',
     name: 'Termopot',
-    desc: 'E-commerce brand — web design',
+    desc: 'Smart home IoT — mobile app design',
     img: '/assets/proj-termopot.png',
   },
   {
     id: 'ilnp',
     name: 'iLNP',
-    desc: 'Beauty e-commerce — web & brand',
+    desc: 'Beauty e-commerce — UI/UX & design system',
     img: '/assets/proj-ilnp.png',
   },
   {
     id: 'global',
     name: 'Global Standards',
-    desc: 'Non-profit certification body — web redesign',
+    desc: 'Non-profit — brand identity & design system',
     img: '/assets/proj-global.jpg',
   },
   {
     id: 'incare',
     name: 'InCare',
-    desc: 'Caregiver matching platform — product design',
+    desc: 'Caregiver platform — mobile app design',
     img: '/assets/proj-incare.png',
   },
 ]
