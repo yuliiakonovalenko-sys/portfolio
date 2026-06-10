@@ -395,8 +395,7 @@ export const PROJECTS: Project[] = [
       },
       { type: "full-image", src: "/assets/projects/Saastorm/7.jpg" },
       { type: "full-image", src: "/assets/projects/Saastorm/8.jpg" },
-      { type: "full-image", src: "/assets/projects/Saastorm/9.jpg" },
-      { type: "full-image", src: "/assets/projects/Saastorm/10.jpg" },
+      { type: "image-pair", left: "/assets/projects/Saastorm/9.jpg", right: "/assets/projects/Saastorm/10.jpg" },
       { type: "image-pair", left: "/assets/projects/Saastorm/11.jpg", right: "/assets/projects/Saastorm/12.jpg" },
 
       {
