@@ -6,7 +6,7 @@ const thumbs = [
   { src: '/assets/thumb1.png' },
   { src: '/assets/thumb2.png' },
   { src: '/assets/thumb3.png' },
-  { src: '/assets/thumb4.png' },
+  { src: '/assets/thumb4.jpg' },
 ]
 
 export default function BriefSection() {

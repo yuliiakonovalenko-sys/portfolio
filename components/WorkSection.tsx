@@ -8,7 +8,7 @@ const projects = [
     id: 'olsom',
     name: 'Olsom',
     desc: 'B2B manufacturing SaaS — web design',
-    img: '/assets/proj-olsom.png',
+    img: '/assets/proj-olsom.jpg',
   },
   {
     id: 'saastorm',
@@ -32,7 +32,7 @@ const projects = [
     id: 'global',
     name: 'Global Standards',
     desc: 'Non-profit certification body — web redesign',
-    img: '/assets/proj-global.png',
+    img: '/assets/proj-global.jpg',
   },
   {
     id: 'incare',
