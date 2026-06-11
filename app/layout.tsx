@@ -5,6 +5,9 @@ import ScrollAnimator from '@/components/ScrollAnimator'
 
 export const metadata: Metadata = {
   title: 'Yuliia Konovalenko — Brand & Product Designer',
+  icons: {
+    icon: '/favicon.svg',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
