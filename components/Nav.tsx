@@ -47,8 +47,8 @@ export default function Nav() {
         gap-1 px-3 sm:px-6
         md:border-r md:border-border
       ">
-        <a href="/#work" className="nav-link">Work</a>
-        <a href="https://drive.google.com/file/d/1P4ZnScTabwcejSMvTigIh7ON0KZti5IM/view?usp=drive_link" target="_blank" rel="noreferrer" className="nav-link">CV</a>
+        <a href="/#work" className="nav-link" data-emoji="😎">Work</a>
+        <a href="https://drive.google.com/file/d/1P4ZnScTabwcejSMvTigIh7ON0KZti5IM/view?usp=drive_link" target="_blank" rel="noreferrer" className="nav-link" data-emoji="👀">CV</a>
       </div>
 
       {/* ── Email ─────────────────────────────────────────

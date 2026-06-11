@@ -59,8 +59,8 @@ export default function WorkSection() {
         grid grid-cols-1 md:grid-cols-2
         gap-10 md:gap-x-5 md:gap-y-[72px]
       ">
-        {projects.map((p) => (
-          <div key={p.id} className="flex flex-col gap-[22px]">
+        {projects.map((p, i) => (
+          <div key={p.id} data-animate data-delay={i * 80} className="flex flex-col gap-[22px]">
 
             {/* Image link — hover zoom handled by .project-img-link in globals.css */}
             <a
@@ -69,6 +69,7 @@ export default function WorkSection() {
               style={{ aspectRatio: '670/570' }}
             >
               <img src={p.img} alt={p.name} loading="lazy" />
+              <span className="proj-hover-btn">View project 🧐</span>
             </a>
 
             {/* Info */}

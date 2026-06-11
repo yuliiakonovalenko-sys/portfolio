@@ -13,7 +13,7 @@ export default function BriefSection() {
   return (
     <div id="about" className="px-5 md:px-10 pt-[60px] md:pt-[120px] pb-10 md:pb-[60px]">
 
-      <h2 className="
+      <h2 data-animate data-delay="0" className="
         font-serif font-normal text-center
         text-[clamp(30px,3.3vw,48px)]
         leading-[1.12] tracking-[-0.3px]
@@ -24,7 +24,7 @@ export default function BriefSection() {
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
         {thumbs.map((t, i) => (
-          <div key={i} className="overflow-hidden rounded-[2px]" style={{ aspectRatio: '325/359' }}>
+          <div key={i} data-animate data-delay={i * 80} className="overflow-hidden rounded-[2px]" style={{ aspectRatio: '325/359' }}>
             <img src={t.src} alt="" className="w-full h-full object-cover block" loading="lazy" />
           </div>
         ))}

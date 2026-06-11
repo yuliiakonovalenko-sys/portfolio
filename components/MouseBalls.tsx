@@ -52,11 +52,19 @@ export default function MouseBalls() {
     const rand = (min: number, max: number) =>
       Math.round(Math.random() * (max - min + 1)) + min
 
+    const palette = [
+      // pinks
+      '#FBEAF3', '#f5c0dd', '#e8a0c8', '#d4619a', '#c94f8a',
+      // greys
+      '#2d2f39', '#797e97', '#6b6b6b', '#b0b0b8', '#dcdce0',
+    ]
+
     const interval = setInterval(() => {
       if (!isMoving || display.x < 0 || isOverNav()) return
 
       const size = rand(8, 24)
       const range = 14
+      const color = palette[rand(0, palette.length - 1)]
       const ball = document.createElement('div')
       ball.className = 'mouse-ball'
       ball.style.cssText = `
@@ -64,7 +72,7 @@ export default function MouseBalls() {
         top:  ${rand(display.y - range - size, display.y + range)}px;
         width: ${size}px;
         height: ${size}px;
-        background: rgb(${rand(0,255)},${rand(0,255)},${rand(0,255)});
+        background: ${color};
       `
       document.body.appendChild(ball)
       ball.addEventListener('animationend', () => ball.remove(), { once: true })

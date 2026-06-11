@@ -28,7 +28,14 @@ export default function Hero() {
           text-[clamp(36px,6vw,82px)]
           whitespace-normal md:whitespace-nowrap
         ">
-          (Brand &amp; Product Designer)
+          {['(Brand', '&', 'Product', 'Designer)'].map((word, i) => (
+            <span key={i} className="hero-word-wrap">
+              <span className="hero-word" style={{ animationDelay: `${0.05 + i * 0.09}s` }}>
+                {word}
+              </span>
+              {i < 3 ? ' ' : ''}
+            </span>
+          ))}
         </h1>
 
         {/* ── Two-column row ── */}
@@ -45,8 +52,7 @@ export default function Hero() {
               8+ years designing brand identities, marketing websites, and digital products — at Awwwards-recognized studios and for B2B companies and startups.
             </p>
             <p className="text-[17px] md:text-[22px] font-medium leading-[1.25] tracking-[0.5px]">
-              I help product-led companies build the visual systems that hold their
-              brand together, from logo and identity to launch sites and in-product moments.
+              I help product-led companies build the visual systems that hold their brand together, from logo and identity to launch sites and in-product moments.
             </p>
 
             {/* Badges */}
