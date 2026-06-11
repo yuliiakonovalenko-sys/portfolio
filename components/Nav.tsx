@@ -7,8 +7,11 @@ import CopyEmail from './CopyEmail'
 
 export default function Nav() {
   return (
+    <>
+    {/* Spacer so content doesn't hide under the fixed nav */}
+    <div className="h-[60px] sm:h-[72px] md:h-[84px]" aria-hidden="true" />
     <nav className="
-      sticky top-0 z-50
+      fixed top-0 left-0 right-0 z-50
       grid grid-cols-2
       h-[60px] sm:h-[72px] md:h-[84px]
       md:grid-cols-3
@@ -63,5 +66,6 @@ export default function Nav() {
       </div>
 
     </nav>
+    </>
   )
 }

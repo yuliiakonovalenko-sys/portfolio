@@ -17,7 +17,7 @@ export default function BriefSection() {
         font-serif font-normal text-center
         text-[clamp(30px,3.3vw,48px)]
         leading-[1.12] tracking-[-0.3px]
-        mb-10
+        mb-4 md:mb-10
       ">
         From brief to final pixel
       </h2>

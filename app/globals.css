@@ -98,10 +98,10 @@ body { overflow-x: hidden; }
 /* Overlay content — photo + text — positioned on top of the card image */
 .hero-cta-content {
   position: absolute;
-  /* phone ≤420px */
+  /* phone ≤420px — centered both axes */
   left: 50%;
-  transform: translateX(-50%);
-  top: 54px;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 148px;
   display: flex;
   flex-direction: column;
@@ -109,7 +109,7 @@ body { overflow-x: hidden; }
   gap: 8px;
 }
 @media (min-width: 421px) {
-  .hero-cta-content { top: 88px; width: 176px; }
+  .hero-cta-content { top: 50%; width: 176px; }
 }
 @media (min-width: 801px) and (max-width: 1100px) {
   /* tablet: card is in a flex row beside the description */
