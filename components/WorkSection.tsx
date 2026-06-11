@@ -69,7 +69,6 @@ export default function WorkSection() {
               style={{ aspectRatio: '670/570' }}
             >
               <img src={p.img} alt={p.name} loading="lazy" />
-              <span className="proj-hover-btn">View project 🧐</span>
             </a>
 
             {/* Info */}
@@ -81,7 +80,7 @@ export default function WorkSection() {
               ">
                 {p.name}
               </div>
-              <div className="text-[20px] font-medium tracking-[0.5px] leading-[1.25]">
+              <div className="text-[15px] md:text-[20px] font-medium tracking-[0.5px] leading-[1.25]">
                 {p.desc}
               </div>
             </div>

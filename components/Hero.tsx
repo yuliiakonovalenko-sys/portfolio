@@ -23,7 +23,7 @@ export default function Hero() {
 
         {/* ── Title ── */}
         <h1 className="
-          font-serif font-normal text-center
+          font-serif font-normal text-left md:text-center
           leading-[1.12] tracking-[-0.5px]
           text-[clamp(36px,6vw,82px)]
           whitespace-normal md:whitespace-nowrap
@@ -103,10 +103,10 @@ export default function Hero() {
                 href="mailto:yuliia.konovalenko@gmail.com"
                 target="_blank"
                 rel="noreferrer"
-                className="flex flex-col items-center gap-[17px] no-underline w-full"
+                className="flex flex-col items-center gap-[10px] md:gap-[17px] no-underline w-full"
               >
                 <span className="hero-cta-text">Chat with me</span>
-                <img src="/assets/arrow.svg" alt="" className="w-[31px] h-[31px]" />
+                <img src="/assets/arrow.svg" alt="" className="w-[20px] h-[20px] md:w-[31px] md:h-[31px]" />
               </a>
             </div>
           </div>

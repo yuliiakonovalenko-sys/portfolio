@@ -52,7 +52,7 @@ export const PROJECTS: Project[] = [
   {
     id: "olsom",
     industry: "B2B Manufacturing SaaS",
-    website: "https://olsom.io",
+    website: "https://www.olsom.com/",
     title: "Olsom",
     headline: "Olsom — designing a B2B website for a modular manufacturing platform",
     tagline: "Translating deep B2B product logic into a site buyers trust in under 3 minutes.",
@@ -83,7 +83,7 @@ export const PROJECTS: Project[] = [
         ],
       },
       { type: "video", youtubeId: "sJfMmw_YTPE", heading: "Motion teaser" },
-      { type: "full-image", src: "/assets/projects/Olsom project/2.jpg" },
+      { type: "image-pair", left: "/assets/projects/Olsom project/2_1.jpg", right: "/assets/projects/Olsom project/2_2.jpg" },
 
       // My Role
       {
@@ -123,7 +123,7 @@ export const PROJECTS: Project[] = [
           "This project significantly improved my ability to simplify complex information through design.",
         ],
       },
-      { type: "full-image", src: "/assets/projects/Olsom project/6.jpg", alt: "Olsom website" },
+      { type: "image-pair", left: "/assets/projects/Olsom project/6_1.jpg", right: "/assets/projects/Olsom project/6_2.jpg" },
 
       // Process — Phase 1
       {
