@@ -47,9 +47,9 @@ export default function WorkSection() {
     <section id="work" className="px-5 md:px-10 pt-10 md:pt-[60px] pb-[60px] md:pb-[100px]">
 
       {/* Label */}
-      <div className="flex items-center justify-center gap-[10px] mb-[30px]">
-        <img src="/assets/icon_projects.svg" alt="" className="w-[26px] h-[26px] flex-shrink-0" />
-        <span className="font-medium text-[22px] tracking-[0.5px] text-dark whitespace-nowrap">
+      <div className="flex items-center justify-center gap-[10px] mb-5 md:mb-[30px]">
+        <img src="/assets/icon_projects.svg" alt="" className="w-5 h-5 md:w-[26px] md:h-[26px] flex-shrink-0" />
+        <span className="font-medium text-[16px] md:text-[22px] tracking-[0.5px] text-dark whitespace-nowrap">
           Selected projects
         </span>
       </div>
@@ -60,7 +60,7 @@ export default function WorkSection() {
         gap-10 md:gap-x-5 md:gap-y-[72px]
       ">
         {projects.map((p, i) => (
-          <div key={p.id} data-animate data-delay={i * 80} className="flex flex-col gap-[22px]">
+          <div key={p.id} data-animate data-delay={i * 80} className="flex flex-col gap-3 md:gap-[22px]">
 
             {/* Image link — hover zoom handled by .project-img-link in globals.css */}
             <a
