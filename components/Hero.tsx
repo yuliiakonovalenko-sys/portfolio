@@ -49,7 +49,7 @@ export default function Hero() {
             pb-8 md:pb-0
           ">
             <p className="text-[17px] md:text-[22px] font-medium leading-[1.25] tracking-[0.5px]">
-              8+ years designing brand identities, marketing websites, and digital products — at Awwwards-recognized studios and for B2B companies and startups.
+              Designing brand identities, marketing websites, and digital products — at Awwwards-recognized studios and for B2B companies and startups.
             </p>
             <p className="text-[17px] md:text-[22px] font-medium leading-[1.25] tracking-[0.5px]">
               I help product-led companies build the visual systems that hold their brand together, from logo and identity to launch sites and in-product moments.
